@@ -18,7 +18,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index", { title: "Chess Game" });
+  // res.render("index", { title: "Chess Game" });
+  res.send("Hellow");
 });
 
 io.on("connection", function (uniquesocket) {
